@@ -1,0 +1,22 @@
+.background2 {
+    background-image: url('./images/fotodefundo2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.imagem-texto {
+	grid-template-columns: 300px 500px;
+}
+
+.imagemTela2 {
+    max-height:665px;
+    width: auto;
+    height: auto;
+}
+
+.textoVerde {
+    font-family: picpay-normal;
+    font-size: 20px;
+    color: #223324;
+}

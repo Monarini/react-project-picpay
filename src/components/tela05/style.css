@@ -1,0 +1,17 @@
+.background5 {
+    background-image: url('./images/fotodefundo5.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.div800 {
+    width: 800px;
+}
+
+.imagemTela5 {
+    max-height:400px;
+    width: auto;
+    height: auto;
+    padding: 20px;
+}

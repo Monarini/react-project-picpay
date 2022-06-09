@@ -1,0 +1,20 @@
+.background4 {
+    background-image: url('./images/fotodefundo4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.shapePreto {
+    width: 800px;
+    background-color: #000000;
+    padding: 20px;
+}
+
+.textoBranco {
+    font-family: picpay-normal;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+

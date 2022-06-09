@@ -1,0 +1,11 @@
+.tresColunas {
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.shapeVerde {
+    width: 200px;
+    height: 200px;
+    background-color: #62ED96;
+    padding: 20px;
+    margin: 50px 10px 50px 0;
+}
