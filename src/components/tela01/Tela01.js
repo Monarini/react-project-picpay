@@ -1,10 +1,14 @@
 import './style.css';
 import logo from './images/PicPay.png';
+import seta_baixo from '../images/seta_baixo.png'
 import logoPrograma from './images/logo_observatorio.png';
 
 import React, { useEffect } from "react";
 import AOS from "aos"; 
 import "aos/dist/aos.css";
+import { Link } from 'react-scroll';
+
+
 
 function Tela01 () {
     useEffect(() => { 
@@ -13,12 +17,12 @@ function Tela01 () {
       }, []);
 
     return (
-        <div className='grid background'>
-            <div>
+        <div className='background'>
+            <div className='container scale-08'>
                 <div data-aos="zoom-in" data-aos-duration="1000">
                     <img src={logo} alt="logo"/>
                 </div>
-                <div data-aos='fade-up' data-aos-duration='1000' data-aos-delay='1000'>
+                <div className='grid' data-aos='fade-up' data-aos-duration='1000' data-aos-delay='1000'>
                     <div>
                         <span className='titulos'>Seja bem vindo ao curso de</span>
                     </div>
@@ -28,7 +32,10 @@ function Tela01 () {
                 </div>
                 <div>
                     <div>
-                    <button className='botaoAvancar' type="button">AVANÇAR</button>
+                    <Link to="tela-02" smooth={true} duration={500} ><button className="btnSeta" type="button">
+            <img src={seta_baixo} alt="Seta Avançar"/>
+                Rola para baixo
+                </button></Link>
                     </div>
                 </div>
             </div>
