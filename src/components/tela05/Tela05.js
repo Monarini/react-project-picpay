@@ -26,21 +26,21 @@ function Tela05() {
     <div id="tela-05" className="grid background5">
       <div className="div800 container-05">
         <div className="caixa">
-          <span className="textoBranco text-align-center container-text p-20">
+          <span className="textoBranco text-align-center container-text p-20" data-aos="fade-down" data-aos-duration="1000">
             Mas, no atual cenário que vivemos, com sistemas complexos,
             distribuídos em microsserviços, não é mais a técnica ideal para
             entender e resolver problemas críticos em sistemas de Engenharia de
             Software.
           </span>
         </div>
-        <div className="caixa">
+        <div className="caixa" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500">
           <img
             className="imagemTela5 "
             src={caixa_imagem}
             alt="Caixa de texto com imagem"
           />
         </div>
-        <div className="caixa">
+        <div className="caixa" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
           <a onClick={verificarClique}>
             <MyModal
               name="SAIBA MAIS"

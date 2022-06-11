@@ -33,10 +33,14 @@ function Tela01() {
             <img src={logoPrograma} alt="logo" />
           </div>
         </div>
-        <div>
+        <div >
           <div>
             <Link to="tela-02" smooth={true} duration={500}>
-              <button className="btnSeta" type="button">
+              <button
+               data-aos="zoom-in"
+               data-aos-duration="1000"
+               data-aos-delay="1500"
+               className="btnSeta" type="button">
                 <img src={seta_baixo} alt="Seta Avançar" />
                 Rola para baixo
               </button>

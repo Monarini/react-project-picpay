@@ -16,10 +16,10 @@ function Tela04() {
     <div id="tela-04" className="grid background4">
       <div className="shapePreto">
         <div className="container-04">
-          <span className="titulos">
+          <span className="titulos" data-aos="fade-down" data-aos-duration="1000">
             Apenas monitoramento não basta!<br></br>
           </span>
-          <span className="textoBranco">
+          <span className="textoBranco"  data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500">
             Por muitos anos, as equipes de TI mediam a disponibilidade e
             performance de suas aplicações através da coleta de métricas. O
             monitoramento gira em torno de alertas e interrupções.
@@ -36,7 +36,8 @@ function Tela04() {
           </span>
           <div>
             <Link to="tela-05" smooth={true} duration={500}>
-              <button className="btnSeta" type="button">
+              <button data-aos="fade-up" data-aos-duration="1000"
+              data-aos-delay="1000" className="btnSeta" type="button">
                 <img src={seta_baixo} alt="Seta Avançar" />
                 Rola para baixo
               </button>

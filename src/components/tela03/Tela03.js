@@ -27,8 +27,8 @@ const [isActive, setIsActive] = useState(false)
       <div className="container-03 scale-08">
         <section className="grid texto-imagem">
           <div className="container-text-buttons">
-            <div className="titulos">O que é observabilidade?</div>
-            <div className="text-container">
+            <div data-aos="fade-down"  data-aos-duration="1000" className="titulos">O que é observabilidade?</div>
+            <div className="text-container" data-aos="fade-right"  data-aos-duration="1000">
               <span className="textoVerde">
                 Observabilidade é a habilidade de entender o que está
                 acontecendo dentro do seu sistema com base em suas saídas. Isso
@@ -51,7 +51,7 @@ const [isActive, setIsActive] = useState(false)
               </span>
             </div>
 
-            <div className="buttons-container">
+            <div className="buttons-container" data-aos="fade-up"  data-aos-duration="1000">
               <a onClick={verificarClique}>
               <MyModal
                 name="TÉCNICO"
@@ -70,7 +70,9 @@ const [isActive, setIsActive] = useState(false)
             </div>
           </div>
 
-          <div className="img">
+          <div className="img"
+          data-aos="fade-left"
+          data-aos-duration="1000">
             <img
               className="imagemTela2"
               src={homem_apontando}
@@ -79,7 +81,7 @@ const [isActive, setIsActive] = useState(false)
           </div>
           <div className="alinhano-button">
             <Link className={isActive ? "visible" : "hidden"} to="tela-04" smooth={true} duration={500}>
-              <button className="btnSeta" type="button">
+              <button  className="btnSeta" type="button">
                 <img src={seta_baixo} alt="Seta Avançar" />
                 Rola para baixo
               </button>

@@ -16,14 +16,16 @@ function Tela02() {
     <div id="tela-02" className="grid background2">
       <div className="container-02 scale-08">
         <section className="grid imagem-texto">
-          <div className="container-img">
+          <div className="container-img" data-aos="fade-right"
+          data-aos-duration="1000">
             <img
               className="imagemTela2"
               src={foto_homem}
               alt="Foto de Homem com notebook"
             />
           </div>
-          <div className="container-text">
+          <div className="container-text" data-aos="fade-left"
+          data-aos-duration="1000">
             <span className="textoVerde">
               Sejam muito bem-vindos ao curso básico de <b>Observabilidade</b>.
               <br></br>
@@ -38,7 +40,11 @@ function Tela02() {
           </div>
           <div className="alinhamento-button-02">
             <Link to="tela-03" smooth={true} duration={500}>
-              <button className="btnSeta" type="button">
+              <button 
+               data-aos="zoom-in"
+               data-aos-duration="1000"
+               data-aos-delay="500"
+              className="btnSeta" type="button">
                 <img src={seta_baixo} alt="Seta Avançar" />
                 Rola para baixo
               </button>
