@@ -36,6 +36,11 @@
   color: white;
   font-family: picpay-bold;
   font-size: 20px;
+  transition: all 0.5s;
+}
+
+.btnSeta:hover {
+  transform: scale(1.05)
 }
 
 .container-text {
@@ -73,5 +78,11 @@
 
   .container-text {
     height: 60%;
+  }
+}
+
+@media (max-height: 550px) {
+  .container-02 {
+    transform: scale(0.75) translateY(-120px);
   }
 }

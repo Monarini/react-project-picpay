@@ -2,13 +2,21 @@ import "./style.css";
 import caixa_imagem from "./images/pop.png";
 import seta_baixo from "../images/seta_baixo.png";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-scroll";
 import MyModal from "../shared/MyModal";
+let modal = 0
 
 function Tela05() {
+  const [isActive, setIsActive] = useState(false)
+  function verificarClique(){
+    modal = modal + 1
+    if(modal>1){
+      return setIsActive(true)
+    }
+  }
   useEffect(() => {
     AOS.init();
     AOS.refresh();
@@ -33,12 +41,15 @@ function Tela05() {
           />
         </div>
         <div className="caixa">
-          <MyModal
-            name="SAIBA MAIS"
-            content="Apesar de ser considerado um dos sinais para praticar a Observabilidade, as métricas são muito limitantes para servir como um bloco de construção fundamental da Observabilidade. Por esse motivo, você não deve acreditar que métricas são um dos pilares da Observabilidade (assim como logs também não são e você vai saber o motivo mais adiante)."
-          />
+          <a onClick={verificarClique}>
+            <MyModal
+              name="SAIBA MAIS"
+              title="SAIBA MAIS"
+              content="Apesar de ser considerado um dos sinais para praticar a Observabilidade, as métricas são muito limitantes para servir como um bloco de construção fundamental da Observabilidade. Por esse motivo, você não deve acreditar que métricas são um dos pilares da Observabilidade (assim como logs também não são e você vai saber o motivo mais adiante)."
+            />
+          </a>
         </div>
-        <Link to="tela-06" smooth={true} duration={500}>
+        <Link className={isActive ? "visible" : "hidden"} to="tela-06" smooth={true} duration={500}>
           <button className="btnSeta p-20" type="button">
             <img src={seta_baixo} alt="Seta Avançar" />
             Rola para baixo

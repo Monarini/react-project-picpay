@@ -33,3 +33,9 @@
     gap: 50px;
   }
 }
+
+@media (max-height: 550px) {
+  .container-04 {
+    transform: scale(0.75) translateY(-90px);
+  }
+}

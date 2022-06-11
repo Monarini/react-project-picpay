@@ -54,3 +54,9 @@
     transform: scale(0.85);
   }
 }
+
+@media (max-height: 550px) {
+  .container {
+    transform: scale(0.75);
+  }
+}

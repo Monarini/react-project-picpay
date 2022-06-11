@@ -14,7 +14,8 @@ function Tela06() {
 
   return (
     <div id="tela-06" className="grid background2">
-      <div className="div800 justify-content container-06">
+      <div className="container-06">
+      <div className="div800 justify-content">
         <div>
           <span className="textoVerde">
             Podemos destacar os motivos pelos quais as abordagens de
@@ -51,11 +52,12 @@ function Tela06() {
         </div>
       </div>
       <Link to="tela-01" smooth={true} duration={500}>
-        <button className=" container-06 btnSeta p-20" type="button">
+        <button className="resposivo btnSeta p-20" type="button">
           <img src={seta_baixo} alt="Seta Avançar" />
           Rola para baixo
         </button>
       </Link>
+    </div>
     </div>
   );
 }

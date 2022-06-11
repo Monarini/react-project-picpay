@@ -2,13 +2,21 @@ import "./style.css";
 import homem_apontando from "./images/homem_apontando.png";
 import seta_baixo from "../images/seta_baixo.png";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-scroll";
 import MyModal from "../shared/MyModal";
+let modal = 0
 
 function Tela03() {
+const [isActive, setIsActive] = useState(false)
+  function verificarClique(){
+    modal = modal + 1
+    if(modal>2){
+      return setIsActive(true)
+    }
+  }
   useEffect(() => {
     AOS.init();
     AOS.refresh();
@@ -44,16 +52,21 @@ function Tela03() {
             </div>
 
             <div className="buttons-container">
+              <a onClick={verificarClique}>
               <MyModal
                 name="TÉCNICO"
                 title="TÉCNICO"
                 content="Quando você precisa conhecer ferramentas que vão possibilitar criar insumos para sinais de Observabilidade."
+                
               />
+              </a>
+              <a onClick={verificarClique}>
               <MyModal
                 name="CULTURAL"
                 title="CULTURAL"
-                content="Quando você precisa compreender e adotar novas práticas que vão possibilitar um desenvolvimento contínuo, buscando entender como seus sistemas estão funcionando em um ambiente de produção."
+                content="Quando você precisa compreender e adotar novas práticas que vão possibilitar um desenvolvimento contínuo, buscando entender como seus sistemas estão funcionando em um ambiente de produção."     
               />
+              </a>
             </div>
           </div>
 
@@ -65,7 +78,7 @@ function Tela03() {
             />
           </div>
           <div className="alinhano-button">
-            <Link to="tela-04" smooth={true} duration={500}>
+            <Link className={isActive ? "visible" : "hidden"} to="tela-04" smooth={true} duration={500}>
               <button className="btnSeta" type="button">
                 <img src={seta_baixo} alt="Seta Avançar" />
                 Rola para baixo

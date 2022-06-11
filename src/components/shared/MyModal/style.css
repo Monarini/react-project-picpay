@@ -27,6 +27,7 @@
 .modal-content {
   color: #FFF;
   font-family: picpay-normal;
+  font-size: 20px;
 }
 
 .ReactModal__Overlay {

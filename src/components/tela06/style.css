@@ -15,8 +15,28 @@
   height: 75vh;
 }
 
+.container-06 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 @media (max-height: 660px) {
   .container-06 {
     transform: scale(0.85);
+  }
+}
+
+@media (max-height: 550px) {
+  .container-06 {
+    transform: scale(0.75);
+  }
+
+  .resposivo {
+    transform: translateY(60px);
+  }
+
+  .resposivo:hover {
+    transform: scale(1.05) translateY(60px);
   }
 }
