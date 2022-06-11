@@ -40,7 +40,7 @@
 
 .container-text {
     display: flex;
-    height: 50%;
+    height: 30%;
 }
 
 .container-02 {
@@ -64,4 +64,14 @@
     justify-content: flex-start;
     align-items: flex-end;
     margin-left: 60px;
+}
+
+@media(max-height: 650px) {
+    .container-02 {
+        transform: scale(0.85)
+    }
+
+    .container-text {
+        height: 60%;
+    }
 }

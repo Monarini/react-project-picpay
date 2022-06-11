@@ -17,7 +17,7 @@ function Tela01 () {
       }, []);
 
     return (
-        <div className='background'>
+        <div id="tela-01" className='background'>
             <div className='container scale-08'>
                 <div data-aos="zoom-in" data-aos-duration="1000">
                     <img src={logo} alt="logo"/>

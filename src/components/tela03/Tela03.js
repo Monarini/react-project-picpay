@@ -2,10 +2,13 @@ import './style.css';
 import homem_apontando from './images/homem_apontando.png'
 import seta_baixo from '../images/seta_baixo.png'
 
-import React, { useEffect } from "react";
+import React, { useEffect} from "react";
 import AOS from "aos"; 
 import "aos/dist/aos.css";
 import { Link } from 'react-scroll';
+import MyModal from '../shared/MyModal';
+
+
 
 function Tela03 () {
     useEffect(() => { 
@@ -15,7 +18,7 @@ function Tela03 () {
 
     return (
         <div id="tela-03" className='grid background3'>
-            <div className="container-03">
+            <div className="container-03 scale-08">
                 <section className='grid texto-imagem'>
                     <div className="container-text-buttons">
                         <div className='titulos'>
@@ -33,8 +36,8 @@ function Tela03 () {
                         </div>
 
                         <div className="buttons-container"> 
-                            <button className='botao' type="button">TÉCNICO</button>
-                            <button className='botao' type="button">CULTURAL</button>
+                            <MyModal name="TÉCNICO" title="TÉCNICO" content="Quando você precisa conhecer ferramentas que vão possibilitar criar insumos para sinais de Observabilidade." />
+                            <MyModal name="CULTURAL" title="CULTURAL" content="Quando você precisa compreender e adotar novas práticas que vão possibilitar um desenvolvimento contínuo, buscando entender como seus sistemas estão funcionando em um ambiente de produção."/>
                         </div>
 
                         </div>
@@ -44,10 +47,12 @@ function Tela03 () {
                     </div>
                     <div className="alinhano-button">
 
-                    <Link to="tela-04" smooth={true} duration={500} ><button className="btnSeta" type="button">
-            <img src={seta_baixo} alt="Seta Avançar"/>
-                Rola para baixo
-                </button></Link>
+                    <Link to="tela-04" smooth={true} duration={500} >
+                        <button className="btnSeta" type="button">
+                            <img src={seta_baixo} alt="Seta Avançar"/>
+                            Rola para baixo
+                        </button>
+                    </Link>
                     </div>
                 </section>
             </div>

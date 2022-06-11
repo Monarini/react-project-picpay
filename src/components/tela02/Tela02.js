@@ -15,7 +15,7 @@ function Tela02 () {
       }, []);
     return (
         <div id="tela-02" className='grid background2'>
-            <div className='container-02'>
+            <div className='container-02 scale-08'>
                 <section className='grid imagem-texto'>
                     <div className='container-img'>
                         <img className='imagemTela2' src={foto_homem} alt="Foto de Homem com notebook"/>

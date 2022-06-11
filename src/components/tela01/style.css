@@ -12,14 +12,11 @@
     gap: 10px;
 }
 
-
-
 .background {
     background-image: url('./images/fotodefundo.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    width: 100vw;
     position: relative;
 }
 
@@ -50,4 +47,10 @@
 .botaoAvancar:hover {
     background: #1246ee 0% 0% no-repeat padding-box;
     cursor: pointer;
+}
+
+@media(max-height: 650px) {
+    .container {
+        transform: scale(0.85)
+    }
 }

@@ -7,11 +7,45 @@
 
 .div800 {
     width: 800px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transform: scale(0.95);
 }
 
 .imagemTela5 {
-    max-height:400px;
+    max-height: 450px;
     width: auto;
     height: auto;
     padding: 20px;
+}
+
+.caixa {
+    display: flex;
+    justify-content: center;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.p-20 {
+    padding: 20px
+}
+
+.container-text {
+    width: 720px
+}
+
+@media(max-height: 650px) {
+    .container-05 {
+        transform: scale(0.80);
+    }
+
+    .p-20,
+    .imagemTela5 {
+        padding: 10px
+    }
 }

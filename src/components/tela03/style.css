@@ -78,3 +78,13 @@
     justify-content: flex-end;
     margin-right: 130px;
 }
+
+@media(max-height: 650px) {
+    .container-03 {
+        transform: scale(0.85)
+    }
+
+    .buttons-container {
+        flex-direction: row;
+    }
+}

@@ -9,6 +9,10 @@
     height: 100%;
     width: 800px;
     background: rgba(0, 0, 0, 0.4);
+}
+
+.container-04 {
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -21,4 +25,11 @@
     font-family: picpay-normal;
     font-size: 20px;
     color: #ffffff;
+}
+
+@media(max-height: 650px) {
+    .container-04 {
+        transform: scale(0.85);
+        gap: 50px
+    }
 }
