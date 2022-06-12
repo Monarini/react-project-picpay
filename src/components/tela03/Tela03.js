@@ -27,7 +27,7 @@ const [isActive, setIsActive] = useState(false)
       <div className="container-03 scale-08">
         <section className="grid texto-imagem">
           <div className="container-text-buttons">
-            <div data-aos="fade-down"  data-aos-duration="1000" className="titulos">O que é observabilidade?</div>
+            <div data-aos="zoom-in"  data-aos-duration="1000" className="titulos">O que é observabilidade?</div>
             <div className="text-container" data-aos="fade-right"  data-aos-duration="1000">
               <span className="textoVerde">
                 Observabilidade é a habilidade de entender o que está

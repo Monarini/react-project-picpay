@@ -34,12 +34,9 @@ function Tela01() {
           </div>
         </div>
         <div >
-          <div>
-            <Link to="tela-02" smooth={true} duration={500}>
+          <div >
+            <Link className="visible" to="tela-02" smooth={true} duration={500}>
               <button
-               data-aos="zoom-in"
-               data-aos-duration="1000"
-               data-aos-delay="1500"
                className="btnSeta" type="button">
                 <img src={seta_baixo} alt="Seta Avançar" />
                 Rola para baixo

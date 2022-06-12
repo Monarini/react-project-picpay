@@ -49,6 +49,10 @@
   cursor: pointer;
 }
 
+.visible {
+  z-index: 2;
+}
+
 @media (max-height: 660px) {
   .container {
     transform: scale(0.85);
