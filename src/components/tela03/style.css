@@ -106,3 +106,9 @@
     transform: translateY(-46px)
   }
 }
+
+@media(max-width:700px) {
+  .container-03 {
+    transform: scale(0.75);
+  }
+}
