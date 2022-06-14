@@ -132,12 +132,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 50px;
+    gap: 100px;
     width: 450px;
   }
 
   .container-02 {
-    transform: scale(0.55) translateX(0px) translateY(-200px);
+    transform: scale(0.65) translateX(30px) translateY(-180px);
   }
 
   .alinhamento-button-02 {

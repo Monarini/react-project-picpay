@@ -67,7 +67,8 @@
 
 @media(max-width:700px) {
   .container {
-    transform: scale(0.75);
+    transform: scale(0.75) translateY(-40px);
+    gap: 100px;
   }
 
   .text-center {

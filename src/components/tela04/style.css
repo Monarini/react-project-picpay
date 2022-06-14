@@ -43,6 +43,7 @@
 @media (max-width: 435px) {
   .container-04 {
     transform: scale(0.65);
+    gap: 100px;
   }
 
   .shapePreto {

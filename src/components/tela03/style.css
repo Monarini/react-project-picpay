@@ -115,21 +115,23 @@
 
 @media (max-width: 435px) {
   .container-03 {
-    transform: scale(0.55) translate(-50px, -440px);
+    transform: scale(0.65) translate(-30px, -280px);
   }
 
   .texto-imagem {
     display: flex;
     flex-direction: column;
     text-align: center;
+    gap: 10px
   }
+
 
   .buttons-container {
     flex-direction: row
   }
 
   .imagemTela2 {
-    max-height: 450px
+    max-height: 380px
   }
 
   .alinhano-button {

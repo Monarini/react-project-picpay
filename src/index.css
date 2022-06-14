@@ -31,3 +31,7 @@ code {
 .none {
   display: none;
 }
+
+.overflow-y {
+  overflow-y: hidden;
+}
