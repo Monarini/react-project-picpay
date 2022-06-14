@@ -60,7 +60,7 @@ function Tela05({tela05, tela06, setTela6}) {
           </a>
         </div>
         <Link className={isActive ? "visible" : "hidden"} to="tela-06" smooth={true} duration={500}>
-          <button onMouseEnter={liberaProximaTela} className="btnSeta p-20" type="button">
+          <button onClick={liberaProximaTela} className="btnSeta p-20" type="button">
             <img src={seta_baixo} alt="Seta Avançar" />
             Rola para baixo
           </button>
