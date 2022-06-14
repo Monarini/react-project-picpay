@@ -4,11 +4,16 @@ import React, { useEffect } from "react";
 import seta_baixo from "../images/seta_baixo.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Link } from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 function Tela04({tela04, tela05, setTela5}) {
   function liberaProximaTela(){
     setTela5("grid")
+    if (tela05 !== "grid" ){
+      setTimeout(() => {
+          scroll.scrollToBottom()
+        }, 500);
+      }
   }
   useEffect(() => {
     AOS.init();
@@ -39,7 +44,7 @@ function Tela04({tela04, tela05, setTela5}) {
           </span>
           <div>
             <Link className="visible" to="tela-05" smooth={true} duration={500}>
-              <button onMouseEnter={liberaProximaTela} className="btnSeta" type="button">
+              <button onClick={liberaProximaTela} className="btnSeta" type="button">
                 <img src={seta_baixo} alt="Seta Avançar" />
                 Rola para baixo
               </button>

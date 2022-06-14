@@ -6,12 +6,17 @@ import logoPrograma from "./images/logo_observatorio.png";
 import React, { useEffect} from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Link } from "react-scroll";
+import { Link , animateScroll as scroll } from "react-scroll";
 
 
 function Tela01({tela02, setTela2}) {
   function liberaProximaTela(){
     setTela2("grid")
+    if (tela02 !== "grid" ){
+      setTimeout(() => {
+          scroll.scrollToBottom()
+        }, 500);
+      }
   }
 
   useEffect(() => {
@@ -39,10 +44,10 @@ function Tela01({tela02, setTela2}) {
           </div>
         </div>
         <div >
-          <div >
+          <div  >
             <Link className="visible" to="tela-02" smooth={true} duration={500}>
               <button
-                onMouseEnter={liberaProximaTela}
+                onClick={liberaProximaTela}
                className="btnSeta" type="button">
                 <img src={seta_baixo} alt="Seta Avançar" />
                 Rola para baixo

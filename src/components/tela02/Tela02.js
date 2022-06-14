@@ -5,11 +5,16 @@ import seta_baixo from "../images/seta_baixo.png";
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Link } from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 function Tela02({tela02, tela03, setTela3}) {
   function liberaProximaTela(){
     setTela3("grid")
+    if (tela03 !== "grid" ){
+      setTimeout(() => {
+          scroll.scrollToBottom()
+        }, 500);
+      }
   }
   useEffect(() => {
     AOS.init();

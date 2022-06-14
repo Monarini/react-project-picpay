@@ -5,7 +5,7 @@ import seta_baixo from "../images/seta_baixo.png";
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Link } from "react-scroll";
+import { Link,animateScroll as scroll } from "react-scroll";
 import MyModal from "../shared/MyModal";
 let modal = 0
 
@@ -14,12 +14,16 @@ function Tela05({tela05, tela06, setTela6}) {
 
   function liberaProximaTela(){
     setTela6("grid")
+    if (tela06 !== "grid" ){
+      setTimeout(() => {
+          scroll.scrollToBottom()
+        }, 500);
+      }
   }
 
   function verificarClique(){
     modal = modal + 1
     if(modal>1){
-      setTela6("grid")
       return setIsActive(true)
     }
   }

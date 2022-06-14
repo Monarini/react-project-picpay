@@ -29,6 +29,7 @@ code {
 }
 
 .none {
+  visibility: hidden;
   display: none;
 }
 

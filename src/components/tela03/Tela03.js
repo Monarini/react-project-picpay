@@ -5,7 +5,7 @@ import seta_baixo from "../images/seta_baixo.png";
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Link } from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 import MyModal from "../shared/MyModal";
 let modal = 0
 
@@ -13,12 +13,17 @@ function Tela03({tela03, tela04, setTela4}) {
 const [isActive, setIsActive] = useState(false)
 function liberaProximaTela(){
   setTela4("grid")
+  if (tela04 !== "grid" ){
+    setTimeout(() => {
+        scroll.scrollToBottom()
+      }, 500);
+    }
+  
 }
 
   function verificarClique(){
     modal = modal + 1
     if(modal>2){
-      setTela4("grid")
       return setIsActive(true)
     }
   }
@@ -86,7 +91,7 @@ function liberaProximaTela(){
           </div>
           <div className="alinhano-button">
             <Link className={isActive ? "visible" : "hidden"} to="tela-04" smooth={true} duration={500}>
-              <button onMouseEnter={liberaProximaTela} className="btnSeta" type="button">
+              <button onClick={liberaProximaTela} className="btnSeta" type="button">
                 <img src={seta_baixo} alt="Seta Avançar" />
                 Rola para baixo
               </button>
