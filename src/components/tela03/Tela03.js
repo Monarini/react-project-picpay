@@ -9,8 +9,12 @@ import { Link } from "react-scroll";
 import MyModal from "../shared/MyModal";
 let modal = 0
 
-function Tela03() {
+function Tela03({tela03, tela04, setTela4}) {
 const [isActive, setIsActive] = useState(false)
+function liberaProximaTela(){
+  setTela4("grid")
+}
+
   function verificarClique(){
     modal = modal + 1
     if(modal>2){
@@ -20,10 +24,10 @@ const [isActive, setIsActive] = useState(false)
   useEffect(() => {
     AOS.init();
     AOS.refresh();
-  }, []);
+  }, [tela04]);
 
   return (
-    <div id="tela-03" className="grid background3">
+    <div id="tela-03" className={"background3 " + tela03}>
       <div className="container-03 scale-08">
         <section className="grid texto-imagem">
           <div className="container-text-buttons">
@@ -81,7 +85,7 @@ const [isActive, setIsActive] = useState(false)
           </div>
           <div className="alinhano-button">
             <Link className={isActive ? "visible" : "hidden"} to="tela-04" smooth={true} duration={500}>
-              <button  className="btnSeta" type="button">
+              <button onMouseEnter={liberaProximaTela} className="btnSeta" type="button">
                 <img src={seta_baixo} alt="Seta Avançar" />
                 Rola para baixo
               </button>

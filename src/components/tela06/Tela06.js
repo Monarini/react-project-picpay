@@ -1,19 +1,20 @@
 import "./style.css";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-scroll/modules";
 import seta_baixo from "../images/seta_baixo.png";
 
-function Tela06() {
+function Tela06({tela06}) {
+ 
   useEffect(() => {
     AOS.init();
     AOS.refresh();
   }, []);
 
   return (
-    <div id="tela-06" className="grid background2">
+    <div id="tela-06" className={"background2 " + tela06}>
       <div className="container-06">
       <div className="div800 justify-content">
         <div data-aos="fade-down" data-aos-duration="1000">

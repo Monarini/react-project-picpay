@@ -7,13 +7,16 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-scroll";
 
-function Tela02() {
+function Tela02({tela02, tela03, setTela3}) {
+  function liberaProximaTela(){
+    setTela3("grid")
+  }
   useEffect(() => {
     AOS.init();
     AOS.refresh();
-  }, []);
+  }, [tela03]);
   return (
-    <div id="tela-02" className="grid background2">
+    <div id="tela-02" className={'background2 ' + tela02}>
       <div className="container-02 scale-08">
         <section className="grid imagem-texto">
           <div className="container-img" data-aos="fade-right"
@@ -40,8 +43,9 @@ function Tela02() {
           </div>
           <div className="alinhamento-button-02">
             <Link className="visible" to="tela-03" smooth={true} duration={500}>
-              <button 
-              className="btnSeta" type="button">
+              <button
+                onMouseEnter={liberaProximaTela}
+                className="btnSeta" type="button">
                 <img src={seta_baixo} alt="Seta Avançar" />
                 Rola para baixo
               </button>

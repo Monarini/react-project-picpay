@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 code {
@@ -26,4 +26,8 @@ code {
 @font-face {
   font-family: picpay-normal;
   src: url("../src/fonts/Brink\ -\ BR\ Sonoma\ Medium.otf");
+}
+
+.none {
+  display: none;
 }

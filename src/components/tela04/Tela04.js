@@ -6,14 +6,17 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-scroll";
 
-function Tela04() {
+function Tela04({tela04, tela05, setTela5}) {
+  function liberaProximaTela(){
+    setTela5("grid")
+  }
   useEffect(() => {
     AOS.init();
     AOS.refresh();
-  }, []);
+  }, [tela05]);
 
   return (
-    <div id="tela-04" className="grid background4">
+    <div id="tela-04" className={"background4 " + tela04}>
       <div className="shapePreto">
         <div className="container-04">
           <span className="titulos" data-aos="zoom-in" data-aos-duration="1000">
@@ -36,7 +39,7 @@ function Tela04() {
           </span>
           <div>
             <Link className="visible" to="tela-05" smooth={true} duration={500}>
-              <button className="btnSeta" type="button">
+              <button onMouseEnter={liberaProximaTela} className="btnSeta" type="button">
                 <img src={seta_baixo} alt="Seta Avançar" />
                 Rola para baixo
               </button>
