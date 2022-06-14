@@ -53,7 +53,7 @@ function Tela06({tela06}) {
         </div>
       </div>
       <Link className="visible" to="tela-01" smooth={true} duration={500}>
-        <button className="resposivo btnSeta p-20" type="button">
+        <button className="mobile resposivo btnSeta p-20" type="button">
           <img src={seta_baixo} alt="Seta Avançar" />
           Rola para baixo
         </button>

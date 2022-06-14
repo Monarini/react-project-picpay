@@ -40,3 +40,22 @@
     transform: scale(1.05) translateY(60px);
   }
 }
+
+@media (max-width: 435px) {
+  .container-06 {
+    transform: scale(0.50);
+    gap: 100px;
+    width: 300px
+  }
+
+  .tresColunas {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: none;
+  }
+
+  .justify-content {
+    width: 400px;
+    text-align: center;
+  }
+
+}

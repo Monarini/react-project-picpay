@@ -115,7 +115,7 @@
 
 @media (max-width: 435px) {
   .container-03 {
-    transform: scale(0.55) translate(-50px, -480px);
+    transform: scale(0.55) translate(-50px, -440px);
   }
 
   .texto-imagem {
@@ -135,6 +135,6 @@
   .alinhano-button {
     margin: 0;
     justify-content: center;
-    transform: translateY(-60px)
+    transform: translateY(-80px)
   }
 }
