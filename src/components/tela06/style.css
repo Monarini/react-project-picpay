@@ -49,8 +49,7 @@
   }
 
   .tresColunas {
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: none;
+    gap: 20px;
   }
 
   .justify-content {

@@ -19,6 +19,7 @@ function Tela05({tela05, tela06, setTela6}) {
   function verificarClique(){
     modal = modal + 1
     if(modal>1){
+      setTela6("grid")
       return setIsActive(true)
     }
   }

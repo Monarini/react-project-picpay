@@ -18,6 +18,7 @@ function liberaProximaTela(){
   function verificarClique(){
     modal = modal + 1
     if(modal>2){
+      setTela4("grid")
       return setIsActive(true)
     }
   }

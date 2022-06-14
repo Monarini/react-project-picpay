@@ -44,7 +44,7 @@ function Tela02({tela02, tela03, setTela3}) {
           <div className="alinhamento-button-02">
             <Link className="visible" to="tela-03" smooth={true} duration={500}>
               <button
-                onMouseEnter={liberaProximaTela}
+                onClick={liberaProximaTela}
                 className="btnSeta" type="button">
                 <img src={seta_baixo} alt="Seta Avançar" />
                 Rola para baixo
