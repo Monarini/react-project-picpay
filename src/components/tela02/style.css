@@ -152,8 +152,4 @@
   .container-img {
     transform: scale(0.9);
   }
-
-  .mobile {
-    transform: translateY(180px);
-  }
 }
