@@ -141,15 +141,25 @@
   }
 
   .alinhamento-button-02 {
-    margin-left: 120px;
-    width: 420px
+    margin-left: 100px;
+    width: 400px
   }
 
   .container-text {
-    width: 180px
+    width: 360px !important;
   }
 
   .container-img {
     transform: scale(0.9);
+  }
+
+  .textoVerde {
+    text-align: center;
+    transform: translateX(-60px)
+  }
+
+  .imagemTela2 {
+    max-height: 380px;
+    transform: translateX(-10px);
   }
 }

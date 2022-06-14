@@ -130,10 +130,6 @@
     flex-direction: row
   }
 
-  .imagemTela2 {
-    max-height: 380px
-  }
-
   .alinhano-button {
     margin: 0;
     justify-content: center;
